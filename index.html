@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fatigue Test Pengemudi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Fatigue Test</h1>
+    <input type="text" id="driverName" placeholder="Nama Pengemudi" />
+    <button id="startBtn">Mulai Tes</button>
+    <div id="testArea" class="hidden">
+      <p id="instruction">Klik saat warna berubah!</p>
+      <div id="colorBox"></div>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
