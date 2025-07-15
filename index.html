@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fatigue Test Supir</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🚛 Fatigue Test Supir</h1>
+
+    <form id="fatigueForm" class="form-grid">
+      <div class="form-group"><label>Kode Plant</label><input type="text" id="kodePlant" required /></div>
+      <div class="form-group"><label>Nama Transporter</label><input type="text" id="namaTransporter" /></div>
+      <div class="form-group"><label>Nama Driver</label><input type="text" id="namaDriver" required /></div>
+      <div class="form-group"><label>No. DO / LDT</label><input type="text" id="noDo" /></div>
+      <div class="form-group"><label>Usia (tahun)</label><input type="number" id="usia" /></div>
+      <div class="form-group"><label>No. Truck</label><input type="text" id="noTruck" /></div>
+      <div class="form-group"><label>NIK SBI</label><input type="text" id="nikSbi" /></div>
+      <div class="form-group"><label>Sistolik</label><input type="text" id="sistolik" /></div>
+      <div class="form-group"><label>Diastolik</label><input type="text" id="diastolik" /></div>
+      <div class="form-group"><label>Pulse</label><input type="text" id="pulse" /></div>
+      <div class="form-group"><label>Alcohol (%)</label><input type="text" id="alcohol" /></div>
+      <div class="form-group"><label>Waktu Sekarang</label><span id="liveTime"></span></div>
+      <div class="form-group full"><label>Hasil Test</label><input type="text" id="resultFatigue" readonly /></div>
+    </form>
+
+    <div class="buttons">
+      <button onclick="startTest()">▶️ Mulai Test</button>
+      <button onclick="saveData()">💾 Simpan</button>
+      <button onclick="exportCSV()">⬇️ Ekspor CSV</button>
+      <button onclick="resetForm()">🔄 Reset</button>
+      <a href="history.html"><button>📜 Lihat Histori</button></a>
+    </div>
+
+    <div id="reactionTest" class="reaction-area" style="display: none;">
+      <h2>🧠 Reaksi Test: Klik cepat saat lingkaran merah muncul!</h2>
+      <div id="targetCircle" class="circle hidden"></div>
+      <p id="reactionResult"></p>
+      <button onclick="backToForm()">⏪ Kembali</button>
+    </div>
+
+    <audio id="beepSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
